@@ -1,0 +1,22 @@
+            - name: GitHub Wiki Action
+  # You may pin to the exact commit or the version.
+  # uses: Andrew-Chen-Wang/github-wiki-action@50650fccf3a10f741995523cf9708c53cec8912a
+  uses: Andrew-Chen-Wang/github-wiki-action@v4.4.0
+  with:
+    # Select from 'clone' or 'init' to determine which method to use to push changes to the GitHub wiki. 'clone' will clone the .wiki.git repo and add an additional commit. 'init' will create a new repo with a single commit and force push to the .wiki.git. 'init' involves a force-push! The default is 'clone'.
+    strategy: # default is clone
+    # The repository housing the wiki. Use this if you're publishing to a wiki that's not the current repository. You can change the GitHub server with the github-server-url input. Default is github.repository.
+    repository: # default is ${{ github.repository }}
+    # An alternate https://github.com URL, usually for GitHub Enterprise deployments under your own domain. Default is github.server_url (usually https://github.com).
+    github-server-url: # default is ${{ github.server_url }}
+    # github.token is the default. This token is used when cloning and pushing wiki changes.
+    token: # default is ${{ github.token }}
+    # The directory to use for your wiki contents. Default wiki.
+    path: # default is wiki
+    # The message to use when committing new content. Default is 'Update wiki github.sha'. You probably don't need to change this, since this only applies if you look really closely in your wiki.
+    commit-message: # default is Update wiki ${{ github.sha }}
+    # A multiline list of files that should be ignored when committing and pushing to the remote wiki. Each line is a pattern like .gitignore. Make sure these paths are relative to the path option! The default is none.
+    ignore: # default is 
+    # Whether or not to actually attempt to push changes back to the wiki itself. If this is set to true, we instead print the remote URL and do not push to the remote wiki. The default is false. This is useful for testing.
+    dry-run: 
+          
