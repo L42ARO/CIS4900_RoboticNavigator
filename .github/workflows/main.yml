@@ -3,7 +3,7 @@ name: Documentation
 on:
   push:
     branches:
-      - develop
+      - main
     paths:
       - "docs/**"
   repository_dispatch:
