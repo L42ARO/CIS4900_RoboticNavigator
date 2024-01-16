@@ -8,8 +8,8 @@
 ## Overview
 In this initial week of classes, my primary focus was on reviewing relevant slides to initiate the formulation of ideas. I must concede this task didn't take too much time to perform, I was honestly more worried in solving the issue of getting the permit for the class, so next week I must make up with a heavier workload for literature review.
 However, I do consider that setting up the project environment on GitHub will be of great help moving forward, as stated I leveraged some github automations and features to make it possible to set it up as a project management tool as well as a wiki to keep track of documentation.
-
-{put image of milestone page}
+### Project plan
+![image](https://github.com/L42ARO/CIS4900_RoboticNavigator/assets/89555610/9766092f-3b76-44d8-9774-e6effdf97c42)
 
 
 ## Plans for Next Week
