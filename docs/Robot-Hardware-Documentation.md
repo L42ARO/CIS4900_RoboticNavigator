@@ -25,6 +25,12 @@ Differential Drive
 [Astra Pro Depth Camera](https://www.orbbec.com/products/structured-light-camera/astra-series/)
 Github repo on how to use it: [here](https://github.com/YahboomTechnology/Astra-Pro-Depth-Camera)
 
+- Depth range 0.6m - 8m
+- Depth resolution up to 640X480@30fps
+- RGB resolution up to 1920X1080@30fps (Pro Plus)
+
+>- [ ] Confirm which one we're using `Astra Pro`, `Astra Pro Plus` or `Astra S`
+
 ### Lidar
 [A1M8 Lidar](https://www.amazon.com/Slamtec-RPLIDAR-Scanning-Avoidance-Navigation/dp/B07TJW5SXF)
 
