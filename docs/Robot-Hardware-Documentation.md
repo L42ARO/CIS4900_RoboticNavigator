@@ -5,7 +5,9 @@
 
 ## Computer Specs
 ### JETSON Nano
->![image](https://github.com/L42ARO/CIS4900_RoboticNavigator/assets/89555610/a313f198-184e-4b6a-adb1-7db4978fcf24)
+- 64 bit quad core ARMA57 @ 1.43GHz
+- 128-core NVIDIA Maxwell @ 921 MHz GPU
+
 ### OS
 Ubuntu + [ROS Melodic](https://wiki.ros.org/melodic)
 ## Motors
