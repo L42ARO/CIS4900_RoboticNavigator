@@ -38,11 +38,11 @@ while running:
         sensor_data = laser.sense_obstables()
         FeatureMAP.laser_points_set(sensor_data)
         while BREAK_POINT_IND < (FeatureMAP.NP - FeatureMAP.PMIN):
-            COL2 = (0,0,255)
-            for element in sensor_data:
-                point = environment.AD2Pos(element[0], element[1], element[2])
-                # environment.infomap.set_at((int(point[0]), int(point[1])), (0,255,0))
-                pygame.draw.circle(environment.infomap, COL2, (int(point[0]), int(point[1])), 2,0)
+            # COL2 = (0,0,255)
+            # for element in sensor_data:
+            #     point = environment.AD2Pos(element[0], element[1], element[2])
+            #     # environment.infomap.set_at((int(point[0]), int(point[1])), (0,255,0))
+            #     pygame.draw.circle(environment.infomap, COL2, (int(point[0]), int(point[1])), 2,0)
 
             seedSeg = FeatureMAP.seed_segment_detection(laser.position, BREAK_POINT_IND)
             if seedSeg == False:
@@ -70,8 +70,6 @@ while running:
                         pygame.draw.circle(environment.infomap, COLOR, (int(point[0][0]), int(point[0][1])), 2,0)
 
                     pygame.draw.line(environment.infomap, (255, 0,0), ENDPOINTS[0], ENDPOINTS[1], 2)
-        print(f'LEN : {len(sensor_data)}')
-        print("=" * 20)
             
         environment.dataStorage(sensor_data)
         # environment.show_sensorData()

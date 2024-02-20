@@ -3,6 +3,8 @@ import math
 from fractions import Fraction
 from scipy.odr import *
 
+Landmarks = []
+
 class featuresDetection:
     def __init__(self):
         self.EPSILON = 10
@@ -131,46 +133,67 @@ class featuresDetection:
                 self.LINE_PARAMS = params
             return [self.LASERPOINTS[i:j], predicted_points_to_draw, (i,j)]
         return False
+
     def seed_segment_growing(self, indices, break_point):
         line_eq = self.LINE_PARAMS
         i, j = indices
-        PB, PF = max(break_point, i-1), min(j+1, len(self.LASERPOINTS)-1)
+        NP = len(self.LASERPOINTS)
+        PB, PF = max(break_point, (i - 1) % NP), (j + 1) % NP
+
         while self.dist_point2line(line_eq, self.LASERPOINTS[PF][0]) < self.EPSILON:
-            if PF > self.NP -1:
-                break
-            else:
-                m,b = self.odr_fit(self.LASERPOINTS[PB:PF])
-                line_eq = self.lineForm_si2G(m,b)
-                POINT = self.LASERPOINTS[PF][0]
-            PF = PF + 1
+            m, b = self.odr_fit(self.LASERPOINTS[PB:PF] if PB < PF else self.LASERPOINTS[PB:] + self.LASERPOINTS[:PF])
+            line_eq = self.lineForm_si2G(m, b)
+            POINT = self.LASERPOINTS[PF][0]
+            PF = (PF + 1) % NP
             NEXTPOINT = self.LASERPOINTS[PF][0]
             if self.dist_point2point(POINT, NEXTPOINT) > self.GMAX:
                 break
-        PF = PF -1
-        while self.dist_point2line(line_eq, self.LASERPOINTS[PB][0]) < self.EPSILON:
-            if PB < break_point:
-                break
-            else:
-                m,b = self.odr_fit(self.LASERPOINTS[PB:PF])
-                line_eq= self.lineForm_si2G(m, b)
-                POINT = self.LASERPOINTS[PB][0]
 
-            PB = PB -1
+        PF = (PF - 1) % NP
+
+        while self.dist_point2line(line_eq, self.LASERPOINTS[PB][0]) < self.EPSILON:
+            m, b = self.odr_fit(self.LASERPOINTS[PB:PF] if PB < PF else self.LASERPOINTS[PB:] + self.LASERPOINTS[:PF])
+            line_eq = self.lineForm_si2G(m, b)
+            POINT = self.LASERPOINTS[PB][0]
+            PB = (PB - 1) % NP
             NEXTPOINT = self.LASERPOINTS[PB][0]
             if self.dist_point2point(POINT, NEXTPOINT) > self.GMAX:
                 break
-        PB = PB + 1
+
+        PB = (PB + 1) % NP
+
         LR = self.dist_point2point(self.LASERPOINTS[PB][0], self.LASERPOINTS[PF][0])
-        PR = len(self.LASERPOINTS[PB:PF])
-        print(f'Valid:{(LR >= self.LMIN) and (PR >= self.PMIN)} | LR:{LR} LMIN: {self.LMIN} | PR:{PR}=>[{PB}:{PF}] PMIN:{self.PMIN}')
+        PR = len(self.LASERPOINTS[PB:PF] if PB < PF else self.LASERPOINTS[PB:] + self.LASERPOINTS[:PF])
         if (LR >= self.LMIN) and (PR >= self.PMIN):
             self.LINE_PARAMS = line_eq
             m, b = self.lineForm_G2SI(line_eq[0], line_eq[1], line_eq[2])
             self.two_points = self.line_2points(m, b)
-            self.LINE_SEGMENTS.append((self.LASERPOINTS[PB+1][0], self.LASERPOINTS[PF-1][0]))
-            return [self.LASERPOINTS[PB:PF], self.two_points,
-                    (self.LASERPOINTS[PB +1][0], self.LASERPOINTS[PF-1][0]), PF, line_eq, (m,b)]
+            self.LINE_SEGMENTS.append((self.LASERPOINTS[(PB + 1) % NP][0], self.LASERPOINTS[(PF - 1) % NP][0]))
+            return [self.LASERPOINTS[PB:PF] if PB < PF else self.LASERPOINTS[PB:] + self.LASERPOINTS[:PF],
+                    self.two_points, (self.LASERPOINTS[(PB + 1) % NP][0], self.LASERPOINTS[(PF - 1) % NP][0]),
+                    PF, line_eq, (m, b)]
         else:
             return False
 
-
+    def lineFeats2point(self):
+        new_rep  = []
+        for feature in self.FEATURES:
+            projection = self.projection_point2line((0,0), feature[0][0], feature[0][1])
+            new_rep.append([feature[0], feature[1], projection])
+        return new_rep
+    #def landmark_association(landmarks):
+        #thresh = 1
+        #for l in landmarks:
+        #    flag = False
+        #    for i, Landmark in enumerate(Landmarks):
+        #        dist = featuresDetection.dist_point2point(l[1], Landmark[2])
+        #        if dist < thresh:
+        #            if not is_overlap(l[1], Landmark[1]):
+        #                continue
+        #            else:
+        #                Landmakrs.pop(i)
+        #                Landmarks.inser(i, l)
+        #                flag = True
+        #                break
+        #            if not flag:
+        #                Landmakrs.append(l)
