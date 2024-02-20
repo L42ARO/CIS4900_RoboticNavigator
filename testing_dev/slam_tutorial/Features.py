@@ -9,9 +9,9 @@ class featuresDetection:
     def __init__(self):
         self.EPSILON = 10
         self.DELTA = 501
-        self.SNUM = 6
+        self.SNUM = 5
         self.PMIN = 20
-        self.GMAX = 15
+        self.GMAX = 20
         self.SEED_SEGMENTS = []
         self.LINE_SEGMENTS = []
         self.LASERPOINTS=[]
@@ -20,6 +20,7 @@ class featuresDetection:
         self.LMIN=20 #minmum length of a line segment
         self.LR = 0 #real length of a line segment
         self.PR = 0 #the number of last points contained in the line segment
+        self.FEATURES = []
         
     def dist_point2point(self, point1, point2):
         px = (point1[0] - point2[0])**2
@@ -181,19 +182,35 @@ class featuresDetection:
             projection = self.projection_point2line((0,0), feature[0][0], feature[0][1])
             new_rep.append([feature[0], feature[1], projection])
         return new_rep
-    #def landmark_association(landmarks):
-        #thresh = 1
-        #for l in landmarks:
-        #    flag = False
-        #    for i, Landmark in enumerate(Landmarks):
-        #        dist = featuresDetection.dist_point2point(l[1], Landmark[2])
-        #        if dist < thresh:
-        #            if not is_overlap(l[1], Landmark[1]):
-        #                continue
-        #            else:
-        #                Landmakrs.pop(i)
-        #                Landmarks.inser(i, l)
-        #                flag = True
-        #                break
-        #            if not flag:
-        #                Landmakrs.append(l)
+
+def dist_point2point(point1, point2):
+        px = (point1[0] - point2[0])**2
+        py = (point1[1] - point2[1])**2
+        return math.sqrt(px+py)
+def landmark_association(landmarks):
+    thresh = 10
+    for l in landmarks:
+        flag = False
+        for i, Landmark in enumerate(Landmarks):
+            dist = dist_point2point(l[2], Landmark[2])
+            if dist < thresh:
+                if not is_overlap(l[1], Landmark[1]):
+                    continue
+                else:
+                    Landmarks.pop(i)
+                    Landmarks.insert(i, l)
+                    flag = True
+                    break
+        if not flag:
+            Landmarks.append(l)
+
+def is_overlap(seg1, seg2):
+    length1 = dist_point2point(seg1[0], seg1[1])
+    length2 = dist_point2point(seg2[0], seg2[1])
+    center1 = ((seg1[0][0] + seg1[1][0])/2, (seg1[0][1] + seg1[1][1])/2)
+    center2 = ((seg2[0][0] + seg2[1][0])/2, (seg2[0][1] + seg2[1][1])/2)
+    dist = dist_point2point(center1, center2)
+    if dist>(length1+length2)/2:
+        return False
+    else:
+        return True

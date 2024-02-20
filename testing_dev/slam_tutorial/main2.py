@@ -38,11 +38,11 @@ while running:
         sensor_data = laser.sense_obstables()
         FeatureMAP.laser_points_set(sensor_data)
         while BREAK_POINT_IND < (FeatureMAP.NP - FeatureMAP.PMIN):
-            # COL2 = (0,0,255)
-            # for element in sensor_data:
-            #     point = environment.AD2Pos(element[0], element[1], element[2])
-            #     # environment.infomap.set_at((int(point[0]), int(point[1])), (0,255,0))
-            #     pygame.draw.circle(environment.infomap, COL2, (int(point[0]), int(point[1])), 2,0)
+            COL2 = (255, 0, 0)
+            for element in sensor_data:
+                point = environment.AD2Pos(element[0], element[1], element[2])
+                # environment.infomap.set_at((int(point[0]), int(point[1])), (0,255,0))
+                pygame.draw.circle(environment.infomap, COL2, (int(point[0]), int(point[1])), 2,0)
 
             seedSeg = FeatureMAP.seed_segment_detection(laser.position, BREAK_POINT_IND)
             if seedSeg == False:
@@ -64,14 +64,17 @@ while running:
                     BREAK_POINT_IND = results[3]
                     ENDPOINTS[0] = FeatureMAP.projection_point2line(OUTERMOST[0], m,c)
                     ENDPOINTS[1] = FeatureMAP.projection_point2line(OUTERMOST[1], m, c)
-                    COLOR = random_color()
-                    for point in line_seg:
-                        environment.infomap.set_at((int(point[0][0]), int(point[0][1])), (0,255,0))
-                        pygame.draw.circle(environment.infomap, COLOR, (int(point[0][0]), int(point[0][1])), 2,0)
-
+                    #COLOR = random_color()
+                    #for point in line_seg:
+                    #    environment.infomap.set_at((int(point[0][0]), int(point[0][1])), (0,255,0))
+                    #    pygame.draw.circle(environment.infomap, COLOR, (int(point[0][0]), int(point[0][1])), 2,0)
+                    FeatureMAP.FEATURES.append([[m,c], ENDPOINTS])
                     pygame.draw.line(environment.infomap, (255, 0,0), ENDPOINTS[0], ENDPOINTS[1], 2)
-            
-        environment.dataStorage(sensor_data)
+                    environment.dataStorage(sensor_data)
+                    FeatureMAP.FEATURES = FeatureMAP.lineFeats2point()
+                    Features.landmark_association(FeatureMAP.FEATURES)
+        for landmark in Features.Landmarks:
+            pygame.draw.line(environment.infomap, (0,0,255), landmark[1][0], landmark[1][1], 2)
         # environment.show_sensorData()
     environment.map.blit(environment.infomap, (0,0))
     pygame.display.update()
