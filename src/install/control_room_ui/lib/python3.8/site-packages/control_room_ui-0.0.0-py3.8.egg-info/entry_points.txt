@@ -1,0 +1,5 @@
+[console_scripts]
+flask_server = control_room_ui.flask_server:main
+lidar_visual = control_room_ui.lidar_visual:main
+test_std_msgs = control_room_ui.test_std_msgs:main
+

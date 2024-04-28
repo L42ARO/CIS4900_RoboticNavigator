@@ -1,0 +1,18 @@
+[3.637s] Invoking command in '/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui': PYTHONPATH=/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/prefix_override:/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build --no-deps install_data
+[4.950s] running develop
+[5.708s] running egg_info
+[5.709s] writing control_room_ui.egg-info/PKG-INFO
+[5.710s] writing dependency_links to control_room_ui.egg-info/dependency_links.txt
+[5.711s] writing entry points to control_room_ui.egg-info/entry_points.txt
+[5.711s] writing requirements to control_room_ui.egg-info/requires.txt
+[5.712s] writing top-level names to control_room_ui.egg-info/top_level.txt
+[5.871s] reading manifest file 'control_room_ui.egg-info/SOURCES.txt'
+[5.875s] writing manifest file 'control_room_ui.egg-info/SOURCES.txt'
+[6.054s] running build_ext
+[6.056s] Creating /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages/site.py
+[6.065s] Creating /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages/control-room-ui.egg-link (link to .)
+[6.068s] Installing flask_server script to /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/control_room_ui
+[6.070s] 
+[6.072s] Installed /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui
+[6.072s] running install_data
+[6.210s] Invoked command in '/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui' returned '0': PYTHONPATH=/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/prefix_override:/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build --no-deps install_data

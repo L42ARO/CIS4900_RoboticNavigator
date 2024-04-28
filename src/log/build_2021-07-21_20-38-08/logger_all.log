@@ -1,0 +1,119 @@
+[1.788s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[1.788s] DEBUG:colcon:Parsed command line arguments: Namespace(ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f99a93970>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f99a93970>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f99a93f40>)
+[1.919s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.922s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[1.925s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[1.925s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.925s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.925s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.925s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.926s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.926s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/root/usf_robotics/CIS4900_RoboticNavigator/src'
+[1.926s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.927s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.927s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.927s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.927s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.928s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.928s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.928s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.928s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.018s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.018s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.019s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.019s] Level 1:colcon.colcon_core.package_identification:_identify(control_room_ui) by extensions ['ignore', 'ignore_ament_install']
+[2.019s] Level 1:colcon.colcon_core.package_identification:_identify(control_room_ui) by extension 'ignore'
+[2.020s] Level 1:colcon.colcon_core.package_identification:_identify(control_room_ui) by extension 'ignore_ament_install'
+[2.020s] Level 1:colcon.colcon_core.package_identification:_identify(control_room_ui) by extensions ['colcon_pkg']
+[2.020s] Level 1:colcon.colcon_core.package_identification:_identify(control_room_ui) by extension 'colcon_pkg'
+[2.020s] Level 1:colcon.colcon_core.package_identification:_identify(control_room_ui) by extensions ['colcon_meta']
+[2.020s] Level 1:colcon.colcon_core.package_identification:_identify(control_room_ui) by extension 'colcon_meta'
+[2.021s] Level 1:colcon.colcon_core.package_identification:_identify(control_room_ui) by extensions ['ros']
+[2.021s] Level 1:colcon.colcon_core.package_identification:_identify(control_room_ui) by extension 'ros'
+[2.031s] DEBUG:colcon.colcon_core.package_identification:Package 'control_room_ui' with type 'ros.ament_python' and name 'control_room_ui'
+[2.032s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.032s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.033s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.033s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.034s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.034s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.034s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.142s] Level 5:colcon.colcon_core.verb:set package 'control_room_ui' build argument 'cmake_args' from command line to 'None'
+[2.142s] Level 5:colcon.colcon_core.verb:set package 'control_room_ui' build argument 'cmake_target' from command line to 'None'
+[2.142s] Level 5:colcon.colcon_core.verb:set package 'control_room_ui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.142s] Level 5:colcon.colcon_core.verb:set package 'control_room_ui' build argument 'cmake_clean_cache' from command line to 'False'
+[2.143s] Level 5:colcon.colcon_core.verb:set package 'control_room_ui' build argument 'cmake_clean_first' from command line to 'False'
+[2.143s] Level 5:colcon.colcon_core.verb:set package 'control_room_ui' build argument 'cmake_force_configure' from command line to 'False'
+[2.143s] Level 5:colcon.colcon_core.verb:set package 'control_room_ui' build argument 'ament_cmake_args' from command line to 'None'
+[2.143s] Level 5:colcon.colcon_core.verb:set package 'control_room_ui' build argument 'catkin_cmake_args' from command line to 'None'
+[2.143s] Level 5:colcon.colcon_core.verb:set package 'control_room_ui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.143s] DEBUG:colcon.colcon_core.verb:Building package 'control_room_ui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui', 'merge_install': False, 'path': '/root/usf_robotics/CIS4900_RoboticNavigator/src/control_room_ui', 'symlink_install': True, 'test_result_base': None}
+[2.147s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.165s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.166s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/root/usf_robotics/CIS4900_RoboticNavigator/src/control_room_ui' with build type 'ament_python'
+[2.167s] Level 1:colcon.colcon_core.shell:create_environment_hook('control_room_ui', 'ament_prefix_path')
+[2.190s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.191s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui/hook/ament_prefix_path.ps1'
+[2.193s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui/hook/ament_prefix_path.dsv'
+[2.195s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui/hook/ament_prefix_path.sh'
+[2.204s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.205s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.563s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/root/usf_robotics/CIS4900_RoboticNavigator/src/control_room_ui'
+[3.572s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.572s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.804s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/ament_index/resource_index/packages/control_room_ui
+[5.805s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui/package.xml
+[5.806s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/control_room_ui/flask_server
+[5.811s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui': PYTHONPATH=/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/prefix_override:/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build --no-deps install_data
+[8.377s] Level 1:colcon.colcon_core.shell:create_environment_hook('control_room_ui', 'pythonpath_develop')
+[8.383s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui' returned '0': PYTHONPATH=/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/prefix_override:/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build --no-deps install_data
+[8.387s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/share/control_room_ui/hook/pythonpath_develop.ps1'
+[8.389s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/share/control_room_ui/hook/pythonpath_develop.dsv'
+[8.390s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/share/control_room_ui/hook/pythonpath_develop.sh'
+[8.415s] Level 1:colcon.colcon_core.environment:checking '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui' for CMake module files
+[8.419s] Level 1:colcon.colcon_core.environment:checking '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui' for CMake config files
+[8.422s] Level 1:colcon.colcon_core.environment:checking '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib'
+[8.423s] Level 1:colcon.colcon_core.environment:checking '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/bin'
+[8.424s] Level 1:colcon.colcon_core.environment:checking '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/pkgconfig/control_room_ui.pc'
+[8.425s] Level 1:colcon.colcon_core.environment:checking '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages'
+[8.425s] Level 1:colcon.colcon_core.shell:create_environment_hook('control_room_ui', 'pythonpath')
+[8.434s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui/hook/pythonpath.ps1'
+[8.436s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui/hook/pythonpath.dsv'
+[8.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui/hook/pythonpath.sh'
+[8.439s] Level 1:colcon.colcon_core.environment:checking '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/bin'
+[8.439s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control_room_ui)
+[8.448s] INFO:colcon.colcon_core.shell:Creating package script '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui/package.ps1'
+[8.452s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui/package.dsv'
+[8.455s] INFO:colcon.colcon_core.shell:Creating package script '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui/package.sh'
+[8.458s] INFO:colcon.colcon_core.shell:Creating package script '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui/package.bash'
+[8.462s] INFO:colcon.colcon_core.shell:Creating package script '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui/package.zsh'
+[8.465s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/colcon-core/packages/control_room_ui)
+[8.466s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.467s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.467s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[8.468s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.494s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[8.494s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.494s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.495s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.513s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[8.514s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.522s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/local_setup.ps1'
+[8.526s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/_local_setup_util_ps1.py'
+[8.532s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/setup.ps1'
+[8.548s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/local_setup.sh'
+[8.550s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/_local_setup_util_sh.py'
+[8.552s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/setup.sh'
+[8.567s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/local_setup.bash'
+[8.569s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/setup.bash'
+[8.585s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/local_setup.zsh'
+[8.586s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/usf_robotics/CIS4900_RoboticNavigator/src/install/setup.zsh'

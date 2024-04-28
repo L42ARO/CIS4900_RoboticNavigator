@@ -1,0 +1,37 @@
+[3.594s] Invoking command in '/root/usf_robotics/CIS4900_RoboticNavigator/src/control_room_ui': PYTHONPATH=/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/prefix_override:/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/control_room_ui build --build-base /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build install --record /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/install.log --install-scripts $base/lib/control_room_ui --single-version-externally-managed
+[4.806s] running egg_info
+[4.809s] creating ../build/control_room_ui/control_room_ui.egg-info
+[4.810s] writing ../build/control_room_ui/control_room_ui.egg-info/PKG-INFO
+[4.811s] writing dependency_links to ../build/control_room_ui/control_room_ui.egg-info/dependency_links.txt
+[4.811s] writing entry points to ../build/control_room_ui/control_room_ui.egg-info/entry_points.txt
+[4.812s] writing requirements to ../build/control_room_ui/control_room_ui.egg-info/requires.txt
+[4.812s] writing top-level names to ../build/control_room_ui/control_room_ui.egg-info/top_level.txt
+[4.818s] writing manifest file '../build/control_room_ui/control_room_ui.egg-info/SOURCES.txt'
+[4.982s] reading manifest file '../build/control_room_ui/control_room_ui.egg-info/SOURCES.txt'
+[4.985s] writing manifest file '../build/control_room_ui/control_room_ui.egg-info/SOURCES.txt'
+[4.986s] running build
+[4.986s] running build_py
+[4.987s] creating /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build
+[4.987s] creating /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build/lib
+[4.988s] creating /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build/lib/control_room_ui
+[4.988s] copying control_room_ui/__init__.py -> /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build/lib/control_room_ui
+[4.988s] copying control_room_ui/flask_server.py -> /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build/lib/control_room_ui
+[4.989s] running install
+[4.992s] running install_lib
+[4.996s] creating /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages/control_room_ui
+[4.997s] copying /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build/lib/control_room_ui/__init__.py -> /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages/control_room_ui
+[4.997s] copying /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build/lib/control_room_ui/flask_server.py -> /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages/control_room_ui
+[5.000s] byte-compiling /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages/control_room_ui/__init__.py to __init__.cpython-38.pyc
+[5.005s] byte-compiling /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages/control_room_ui/flask_server.py to flask_server.cpython-38.pyc
+[5.007s] running install_data
+[5.009s] creating /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/ament_index
+[5.010s] creating /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/ament_index/resource_index
+[5.010s] creating /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/ament_index/resource_index/packages
+[5.011s] copying resource/control_room_ui -> /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/ament_index/resource_index/packages
+[5.011s] copying package.xml -> /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/share/control_room_ui
+[5.012s] running install_egg_info
+[5.020s] Copying ../build/control_room_ui/control_room_ui.egg-info to /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages/control_room_ui-0.0.0-py3.8.egg-info
+[5.023s] running install_scripts
+[5.096s] Installing flask_server script to /root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/control_room_ui
+[5.098s] writing list of installed files to '/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/install.log'
+[5.199s] Invoked command in '/root/usf_robotics/CIS4900_RoboticNavigator/src/control_room_ui' returned '0': PYTHONPATH=/root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/prefix_override:/root/usf_robotics/CIS4900_RoboticNavigator/src/install/control_room_ui/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/control_room_ui build --build-base /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/build install --record /root/usf_robotics/CIS4900_RoboticNavigator/src/build/control_room_ui/install.log --install-scripts $base/lib/control_room_ui --single-version-externally-managed
