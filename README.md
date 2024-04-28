@@ -1,5 +1,4 @@
 # CIS4900_RoboticNavigator
-Robotic hallway navigator project 🤖 🗺️
 
 # Structure
 This project is divided into the following folders:
@@ -16,6 +15,7 @@ This project is divided into the following folders:
 - `resources/join-docker.sh`: This script is just a helper script so that in new terminals that you spin up, just call this script and it will join you to the main robot docker
 - `src/control_room_ui`: Is the ROS2 package that spins up a server that you can use to send robot information and relay it over a network
 - `src/my_graph_slam`: Is the ROS2 package that has the wall following script that should run alongside an OrbSLAM process
+- `resources/yahboomcar_ros2_ws`: Is the program files extracted from the robot's computer that showcases how the robot's algorithms work, use these as a reference for your own code
 
 # How to Run
 The files that can be run on the ROSMASTERX3 robot are the ROS packages in the `src` folder.
